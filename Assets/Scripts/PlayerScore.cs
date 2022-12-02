@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScore : MonoBehaviour
 {
+    [SerializeField] private int _pointValue;
     [SerializeField] private int _totalScore;
     [SerializeField] private float _timer = 0f;
     [SerializeField] private float _timeBetweenIncrements;
@@ -23,9 +24,11 @@ public class PlayerScore : MonoBehaviour
         }
     }
 
-    public void InsidePointZone(bool state)
+    public void InsidePointZone(bool state, int value)
     {
         _insidePointZone = state;
+        _pointValue = value;
+
     }
     public void LeftZone()
     {

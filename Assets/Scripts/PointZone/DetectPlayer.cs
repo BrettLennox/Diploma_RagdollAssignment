@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class DetectPlayer : MonoBehaviour
 {
+    [SerializeField] private int _pointValue = 1;
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            other.GetComponentInParent<PlayerScore>().InsidePointZone(true);
+            other.GetComponentInParent<PlayerScore>().InsidePointZone(true, _pointValue);
+            Debug.Log(this.gameObject + " detects: " + other.gameObject.tag);
         }
     }
 
@@ -16,7 +19,7 @@ public class DetectPlayer : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            other.GetComponentInParent<PlayerScore>().InsidePointZone(false);
+            other.GetComponentInParent<PlayerScore>().InsidePointZone(false, _pointValue);
             other.GetComponentInParent<PlayerScore>().LeftZone();
         }
     }
