@@ -7,8 +7,16 @@ public class PlayerScore : MonoBehaviour
     [SerializeField] private int _pointValue;
     [SerializeField] private int _totalScore;
     [SerializeField] private float _timer = 0f;
-    [SerializeField] private float _timeBetweenIncrements;
+    [SerializeField] public float _timeBetweenIncrements;
     [SerializeField] private bool _insidePointZone = false;
+
+    public static PlayerScore instance;
+
+    private void Awake()
+    {
+        instance = this;
+        GameManager.instance.UpdateScoreText(_totalScore);
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,6 +28,7 @@ public class PlayerScore : MonoBehaviour
             {
                 _timer = 0f;
                 _totalScore += 1;
+                GameManager.instance.UpdateScoreText(_totalScore);
             }
         }
     }
@@ -38,5 +47,6 @@ public class PlayerScore : MonoBehaviour
     public void LoseScore()
     {
         _totalScore -= 2;
+        GameManager.instance.UpdateScoreText(_totalScore);
     }
 }
