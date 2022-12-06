@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -8,10 +6,10 @@ public class ClickAndDrag : MonoBehaviour
     public float forceAmmount = 500;
 
     Rigidbody dragObject;
-    Vector3 offset;
+    Vector3 _offset;
 
-    Vector3 orginalPosition;
-    float selectionDistance;
+    Vector3 _orginalPosition;
+    float _selectionDistance;
 
 
     private void Update()
@@ -24,13 +22,13 @@ public class ClickAndDrag : MonoBehaviour
 
             if(Physics.Raycast(ray,out hit, Mathf.Infinity))
             {
-                selectionDistance = Vector3.Distance(ray.origin, hit.point);
+                _selectionDistance = Vector3.Distance(ray.origin, hit.point);
 
                 dragObject = hit.rigidbody;
-                offset = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
+                _offset = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                     Input.mousePosition.y,
-                    selectionDistance));
-                orginalPosition = hit.collider.transform.position;
+                    _selectionDistance));
+                _orginalPosition = hit.collider.transform.position;
             }
 
         }
@@ -49,9 +47,9 @@ public class ClickAndDrag : MonoBehaviour
             Vector3 mousePositionOffset = Camera.main.ScreenToWorldPoint(new Vector3
             (Input.mousePosition.x,
                 Input.mousePosition.y,
-                selectionDistance)) - orginalPosition;
+                _selectionDistance)) - _orginalPosition;
 
-            dragObject.velocity = (orginalPosition + mousePositionOffset - dragObject.transform.position)
+            dragObject.velocity = (_orginalPosition + mousePositionOffset - dragObject.transform.position)
                                   * forceAmmount * Time.deltaTime;
         }
     }

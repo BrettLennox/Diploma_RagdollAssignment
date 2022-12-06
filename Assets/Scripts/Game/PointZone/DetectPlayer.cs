@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DetectPlayer : MonoBehaviour
@@ -9,19 +7,24 @@ public class DetectPlayer : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        //if trigger event happens with a GameObject tagged "Player"
         if (other.gameObject.tag == "Player")
         {
+            //runs InsidePointZone function from the PlayerScore script within Player GameObject
             other.GetComponentInParent<PlayerScore>().InsidePointZone(true, _pointValue);
-            PlayerScore.instance._timeBetweenIncrements = _scoreIncrement;
-            Debug.Log(this.gameObject + " detects: " + other.gameObject.tag);
+            //sets timeBetweenIncrements from within PlayerScore to the scoreIncremenet variable within this GameObject
+            PlayerScore.instance.timeBetweenIncrements = _scoreIncrement;
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        //if trigger event happens with a GameObject tagged "Player"
         if (other.gameObject.tag == "Player")
         {
+            //runs InsidePointZone function from the PlayerScore script within the Player GameObject
             other.GetComponentInParent<PlayerScore>().InsidePointZone(false, _pointValue);
+            //runs the LeftZone function from PlayerScore withint the Player GameObject
             other.GetComponentInParent<PlayerScore>().LeftZone();
         }
     }
