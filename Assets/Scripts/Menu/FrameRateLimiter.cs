@@ -14,17 +14,19 @@ public class FrameRateLimiter : MonoBehaviour
 
     public void UpdateFrameRate()
     {
+        //sets targetFrameRate to the the current options value selected on the dropdown (converted from string to int value)
         Application.targetFrameRate = int.Parse(FrameRate.options[FrameRate.value].text);
         switch (Application.targetFrameRate)
         {
-            case 60:
-                QualitySettings.vSyncCount = 1;
+            //if value 
+            case 60: //is 60
+                QualitySettings.vSyncCount = 1; //sets vSyncCount to 1
                 break;
-            case 30:
-                QualitySettings.vSyncCount = 2;
+            case 30: //is 30
+                QualitySettings.vSyncCount = 2; //sets vSyncCount to 2
                 break;
-            case 20:
-                QualitySettings.vSyncCount = 3;
+            case 20: //is 20
+                QualitySettings.vSyncCount = 3; //sets vSyncCount to 3
                 break;
         }
     }

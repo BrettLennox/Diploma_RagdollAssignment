@@ -1161,7 +1161,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-10044
+  m_Name: pb_Mesh28528
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1325,7 +1325,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-15472
+  m_Name: pb_Mesh28690
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   _randomMoveTimer: 0
   _randomMoveMin: 1.5
   _randomMoveMax: 3
-  _shouldMove: 0
+  shouldMove: 0
   _isDoublePoint: 0
   _moveAway: 0
 --- !u!43 &620951986
@@ -3357,7 +3357,7 @@ MonoBehaviour:
   _randomMoveTimer: 0
   _randomMoveMin: 3
   _randomMoveMax: 5
-  _shouldMove: 0
+  shouldMove: 0
   _isDoublePoint: 0
   _moveAway: 0
 --- !u!54 &886677482
@@ -4534,7 +4534,7 @@ MonoBehaviour:
   _randomMoveTimer: 0
   _randomMoveMin: 1
   _randomMoveMax: 2
-  _shouldMove: 0
+  shouldMove: 0
   _isDoublePoint: 1
   _moveAway: 0
 --- !u!114 &1003327754
@@ -4887,7 +4887,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-14680
+  m_Name: pb_Mesh28354
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5051,7 +5051,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-13474
+  m_Name: pb_Mesh28368
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5455,7 +5455,7 @@ MonoBehaviour:
   _randomMoveTimer: 0
   _randomMoveMin: 3
   _randomMoveMax: 5
-  _shouldMove: 0
+  shouldMove: 0
   _isDoublePoint: 0
   _moveAway: 0
 --- !u!114 &1414965068
@@ -5604,7 +5604,7 @@ MonoBehaviour:
   _randomMoveTimer: 0
   _randomMoveMin: 3
   _randomMoveMax: 5
-  _shouldMove: 0
+  shouldMove: 0
   _isDoublePoint: 0
   _moveAway: 0
 --- !u!114 &1480868199
@@ -7020,7 +7020,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-8804
+  m_Name: pb_Mesh28448
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7234,7 +7234,7 @@ MonoBehaviour:
   _randomMoveTimer: 0
   _randomMoveMin: 3
   _randomMoveMax: 5
-  _shouldMove: 0
+  shouldMove: 0
   _isDoublePoint: 0
   _moveAway: 0
 --- !u!114 &1811511533
@@ -9646,6 +9646,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3913603254915916207, guid: 8298e3274efa2714aa3556227a177841, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5941731199191289786, guid: 8298e3274efa2714aa3556227a177841, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5941731199191289787, guid: 8298e3274efa2714aa3556227a177841, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9654,6 +9662,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1481592979}
+    - target: {fileID: 5941731199758382293, guid: 8298e3274efa2714aa3556227a177841, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5941731199758702793, guid: 8298e3274efa2714aa3556227a177841, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -10630,7 +10642,7 @@ MonoBehaviour:
   _pointValue: 0
   _totalScore: 0
   _timer: 0
-  _timeBetweenIncrements: 0.5
+  timeBetweenIncrements: 0
   _insidePointZone: 0
 --- !u!137 &8149741330301799116
 SkinnedMeshRenderer:
